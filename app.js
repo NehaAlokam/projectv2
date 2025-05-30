@@ -6,13 +6,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/todo');
+mongoose.connect('mongodb+srv://nehaalokam:4bxX5XbFIY9ylt9U@cluster0.we3rzwf.mongodb.net/todo1');
 const trySchema = new mongoose.Schema({
     name: String,
 });
 const Item = mongoose.model('Task', trySchema);
 const todo = new Item({
-    name: "Welcome to your todo list"
+    name: "Welcome to your todo1 list"
 });
 // const todo2 = new item({
 //     name: "Learn DSA and Algorithms"
